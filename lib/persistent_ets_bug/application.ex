@@ -8,7 +8,7 @@ defmodule PersistentEtsBug.Application do
   def start(_type, _args) do
     children = [
       # Starts a worker by calling: PersistentEtsBug.Worker.start_link(arg)
-      # {PersistentEtsBug.Worker, arg}
+      {PersistentEtsBug.DB, :my_table_name}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
